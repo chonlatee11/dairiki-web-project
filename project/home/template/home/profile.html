@@ -2,19 +2,41 @@
 {% load static %}
 {% block content %}
 <body>
-    <div class="container-fluid">
+    <style>.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+      }</style>
+    <div class="container pt-1">
         <div class="row">
-          <div class="col-sm-6 col-md-6 span 8">
-            <img class="img-fluid" src="{% static 'image/LOGO.ico' %}" alt="logo" width="150" height="200">
-            <h2>Dairiki (Thailand) Co., Ltd.</h2>
+          <div class="col">
+            <img class="center" src="{% static 'image/LOGO.ico' %}" alt="logo" width="150" height="150">
+            <p class="text-center">Dairiki (Thailand) Co., Ltd.</p>
+            <p class="text-center">นโยบายคุณภาพ</p>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center">เน้นความปลอดภัย</p>
+                    <p class="text-center">ใส่ใจคุณภาพ</p>
+                    <p class="text-center">ส่งงานตรงเวลา</p>
+                    <p class="text-center">ลูกค้าพึงพอใจ</p>
+                </div> 
+                <div class="col">
+                    <p class="text-center">Security</p>
+                    <p class="text-center">Quality Conscious</p>
+                    <p class="text-center">Submit work on time</p>
+                    <p class="text-center">Satisfied Customers</p>
+                </div>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-6">
-            <p>Sed ut perspiciatis...</p>
+          <div class="col">
+            <h1 class="text-center">SERVICES</h1>
           </div>
         </div>
         <div class="row">
-            <div class="col-sm6 col-md-6">
-                <h1>Dairiki (Thailand) Co., Ltd.</h1>
+            <div class="col">
+               
             </div>
         </div>
       </div>
