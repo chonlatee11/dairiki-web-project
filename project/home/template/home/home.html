@@ -1,4 +1,6 @@
+{% extends 'home/base.html' %}
 {% load static %}
+{% block content %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,35 +27,7 @@
   </style> 
   <body style="background-color: #021727;">
 
-    <header>
-      <nav style="background-color: #021727;" class="navbar navbar-expand-md navbar-dark fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li>
-              <a class="navbar-brand" href="{% static 'image/LOGO.ico' %}"></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'Profile' %}">Profile <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'Product' %}">Product <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'Equipment' %}">Equipment <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'Parent' %}">Parent <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'Location' %}">Location <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    
 
     <main role="main">
 
@@ -65,7 +39,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="{% static 'image/factory.jpg' %}" alt="First slide" width="300" height="1000">
+            <img class="first-slide" src="{% static 'image/factory.jpg' %}" alt="First slide">
             <div class="container">
             </div>
           </div>
@@ -181,3 +155,4 @@
     <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
   </body>
 </html>
+{% endblock content %}
