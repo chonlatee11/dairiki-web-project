@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'image/LOGO.ico' %}">
-    <title>Dairiki (Thailand) Co.,Ltd.kkkkasdasdasdasdasdkaiwhdihawdihiwa</title>
+    <title>Dairiki (Thailand) Co.,Ltd.</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,19 +36,19 @@
               <a class="navbar-brand" href="{% static 'image/LOGO.ico' %}"></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'Profile' %}">Profile <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Product <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'Product' %}">Product <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Equipment <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'Equipment' %}">Equipment <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Parent <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'Parent' %}">Parent <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Location <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'Location' %}">Location <span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
