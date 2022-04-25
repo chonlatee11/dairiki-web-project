@@ -1,0 +1,81 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pictureset{
+        padding-bottom: 2rem;
+        max-width: auto;
+        height: auto;
+    }
+    .swiper{
+        width: 80%;
+        height: fit-content;
+    }
+    .swiper-slide img{
+        width: 60%;
+        margin-left: 10rem;
+    }
+    .swiper .swiper-button-prev,.swiper .swiper-button-next{
+        color: #ffff;
+    }
+    .swiper .swiper-pagination-bullet-active{
+        background: #ffff;
+    }
+</style>
+<body>
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/castem-2.png' %}"></div>
+            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/castem-1.png' %}"></div>
+            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/DRJ-1b.png' %}"></div>
+            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/DRJ-2b.png' %}"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay:3000,
+            disableOnInteraction: false,
+        },
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable : true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
+</body>
+{% endblock content %}
