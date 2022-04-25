@@ -1,0 +1,186 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+  <!-- css -->
+<style>*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+body{
+  background-color:#151320;
+  height:100vh;   
+  display: grid;
+  place-items: center center;
+  font-family: 'Poppins',sans-serif;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  padding: 20px;
+  grid-gap: 40px;
+  cursor:pointer
+}
+.card{
+  background-color: #07416d;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+  
+}
+img{
+  width:100%;
+  display:block;
+  border-radius: 20px 20px 0 0;
+}
+.container{
+  position: relative;
+
+}
+.container::after{
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+}
+.details{
+  background: rgb(33, 32, 32);
+  padding: 20px 10px;
+}
+.details>h3{
+  color: #ffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+.details>p{
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+</style> 
+
+    <div class="cards">
+        <div class="card card1">
+            <div class="container">
+                <img src="{% static 'image/met1.png' %}" alt="nkc">
+            </div>
+            <div class="details">
+                <h3>Okuma LB15</h3>
+                <p>Max. Turning diameter 250 mm dia<br>
+                  Max. Turning dia o/slide 400 mm dia<br>
+                  Turning Length 500 mm<br>
+                  Spindle speed Range 656-3500 rpm<br><br></p>
+            </div>
+        </div>
+       
+            <div class="card card2">
+                <div class="container">
+                    <img src="{% static 'image/akuma15.png' %}" alt="nkc">
+                </div>
+                <div class="details">
+                    <h3>Okuma LCS15</h3>
+                    <p>MREADING LCS 15 M / JAPAN<br>
+                      Model: 2003<br>
+                      Control unit: READING - OPS700L<br>
+                      Technical Specifications;<br>
+                      Dial Diameter: 550mm<br>
+                     </p>
+                </div>
+            </div>
+         
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/dmu50jk.png' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>DMU 50</h3>
+                        <p>Max. X-Axis  500 mm<br>
+                          Max. Y-Axis 450 mm<br>
+                          Max. Z-Axis 400 mm<br>
+                          Max. workpiece diameter 630 mm<br><br>
+                      
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Head title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                    </div>
+                </div>
+
+    </div>
+</body>
+{% endblock content %}
