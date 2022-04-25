@@ -2,22 +2,156 @@
 {% load static %}
 {% block content %}
 <body>
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6 col-md-6 span 8">
-            <img class="img-fluid" src="{% static 'image/LOGO.ico' %}" alt="logo" width="150" height="200">
-            <h2>Dairiki (Thailand) Co., Ltd.</h2>
-          </div>
-          <div class="col-sm-6 col-md-6">
-            <p>Sed ut perspiciatis...</p>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-sm6 col-md-6">
-                <h1>Dairiki (Thailand) Co., Ltd.</h1>
+  <style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+      }
+    .link{
+      margin-top: 30px;
+      opacity: 0;
+    }
+    .slide-up{
+      animation: slideup 1s linear forwards;
+    }
+    @keyframes slideup{
+      0%{
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      100%{
+        transform: translate(0px);
+        opacity: 1;
+      }
+    }
+    p.slide-up{
+      animation-delay: 1s;
+    }
+    .link.slide-up{
+      animation-delay: 1s;
+    }
+  </style>
+    <div class="container pt-1">
+      <div class="slide-up">
+          <div class="row pt-1">
+            <div class="col">
+              <img class="img-fluid" src="{% static 'image/factory.jpg' %}" alt="factory">
             </div>
         </div>
       </div>
+      <div class="link slide-up">
+        <div class="row pt-1">
+          <div class="col">
+            <h1 class="text-center">Profile</h1>
+          </div>
+        </div>
+        <div class="row pt-1">
+          <div class="col">
+            <p class="font-weight-bolder text-center">Company name</p>
+          </div>
+          <div class="col">
+            <p class="font-weight-normal text-center">Dairiki (Thailand) Co., Ltd.</p>
+          </div>
+        </div>
+        <div class="row pt-1">
+          <div class="col">
+            <p class="font-weight-bolder text-center">President</p>
+          </div>
+          <div class="col">
+            <p class="font-weight-normal text-center">Norihiro Shimizu</p>
+          </div>
+        </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Established</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">22 November 2013</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Factory Manager</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">Samran Palacheewa</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Business Description</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">1.
+            2.
+            3.
+            4.
+            5.
+          </p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Main Business</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">Manufacture of precision metal parts</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Tel</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">+66 (0) 2-704-0012</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Fax</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">+66 (0) 2-704-0013</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Tax ID</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">0-1155-56023-96-3</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Email</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">info@dairiki-t.net</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Address</p>
+        </div>
+        <div class="col">
+          <p class="font-weight-normal text-center">172/2 Moo 17 Bangpli Industrial estate Bang Sao Thong, Samut Prakan 10570 Thailand</p>
+        </div>
+      </div>
+      <div class="row pt-1">
+        <div class="col">
+          <p class="font-weight-bolder text-center">Certification</p>
+        </div>
+        <div class="col">
+          <img class="center" src="{% static 'image/iso.png' %}" alt="factory">
+          <p class="font-weight-normal text-center">ISO9001:2015</p>
+        </div>
+      </div>
+    </div>
+  </div> 
 </body>
 
 {% endblock content %}
