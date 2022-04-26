@@ -7,6 +7,6 @@ urlpatterns = [
     path('profile/',Profile, name= 'Profile'),
     path('product/',Product, name= 'Product'),
     path('equipment/',Equipment, name= 'Equipment'),
-    path('parent/',Parent, name= 'Parent'),
+    path('contact/',Contact, name= 'Contact'),
     path('location/',Location, name= 'Location'),
 ]
