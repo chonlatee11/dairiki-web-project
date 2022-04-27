@@ -1,0 +1,121 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+{% if status %} 
+  {% if status == 'alert' %}
+  <script>
+    const Alert = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+    } 
+  })
+  Alert.fire({
+      icon: 'warning',
+      title: 'Please fill in the blank'
+    })
+  </script>
+  {% else %}
+    <script>
+      const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+      } 
+    })
+      Toast.fire({
+        icon: 'success',
+        title: 'Successfully'
+      })
+      const form = document.getElementById('ContactFrom');
+        form.addEventListener('submit', function handleSubmit(event) {
+          event.preventDefault();
+          form.reset();
+        });
+
+    </script>
+  {% endif %}
+{% endif %}
+<style>
+body {
+  background: linear-gradient(to right, #022642 0%, #145383 80%);
+  font-size: 12px;
+}
+</style>
+<body>
+<div class="background responetablet">
+    <div class="container responetablet">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body responetablet">
+          <div class="screen-body-item left responetablet">
+            <div class="app-title responetablet">
+              <span>CONTACT US</span>
+            </div>
+            <div class="app-contact responetablet">
+              <ul class="fa-ul responetablet">
+                <li><i class="fa-li fa fa-map-marker fa-2x"></i><p>172/2 Moo 17 Bangpli Industrial estate Bang Sao Thong, Samut Prakan 10570 Thailand</p></li>
+                <li><i class="fa-li fa fa-envelope-o fa-2x"></i><p>info@dairiki-t.net</p></li>
+                <li><i class="fa-li fa fa-phone fa-2x"></i><p>+66 (0) 2-704-0012</p></li>
+              </ul>            
+            </div>
+          </div>
+          <div class="screen-body-item">
+              <form method="POST" id="ContactFrom responetablet">
+                  
+                <div class="app-form">
+                    <div class="app-form-group">
+                      <label for="name" style="font-size: smaller;color: aliceblue;">Name</label>
+                      <input type="text" class="app-form-control" name="name" id="name">
+                    </div>
+                    <div class="app-form-group">
+                      <label for="email" style="font-size: smaller;color: aliceblue;">Email</label>  
+                      <input type="email" class="app-form-control"  name="email" id="email">
+                    </div>
+                    <div class="app-form-group">
+                      <label for="name" style="font-size: smaller;color: aliceblue;">Subject</label>
+                      <input type="text" class="app-form-control"  name="subject" id="subject">
+                    </div>
+                    <div class="app-form-group message">
+                      <label for="name" style="font-size: smaller;color: aliceblue;">Detail</label>
+                      <textarea class="app-form-control" name="detail" style="height: 7rem;" id="detail"></textarea>
+                    </div>
+                    <div class="app-form-group buttons">
+                      <button class="btn btn-primary btn-lg" id="submit" type="submit" value="SEND">
+                        <div class="send-button">
+                          <div class="alt-send-button">
+                            <i class='fa fa-paper-plane' style='color: rgb(255, 255, 255);margin-left: auto; margin-right: auto;'></i><span class="send-text">SEND</span>
+                          </div>
+                        </div>
+                        </button>
+                    </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+{% endblock content %}
