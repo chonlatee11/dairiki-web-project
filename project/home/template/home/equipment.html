@@ -18,7 +18,7 @@ body{
 }
 .cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   padding: 20px;
   grid-gap: 40px;
   cursor:pointer
@@ -70,20 +70,20 @@ img{
     <div class="cards">
         <div class="card card1">
             <div class="container">
-                <img src="{% static 'image/met1.png' %}" alt="nkc">
+                <img src="{% static 'image/equipment/met1.png' %}" alt="nkc">
             </div>
             <div class="details">
                 <h3>Okuma LB15</h3>
                 <p>Max. Turning diameter 250 mm dia<br>
                   Max. Turning dia o/slide 400 mm dia<br>
-                  Turning Length 500 mm<br>
-                  Spindle speed Range 656-3500 rpm<br><br></p>
+                  Turning Length 500 mm<br><br>
+                  </p>
             </div>
         </div>
        
             <div class="card card2">
                 <div class="container">
-                    <img src="{% static 'image/akuma15.png' %}" alt="nkc">
+                    <img src="{% static 'image/equipment/lcs15.png' %}" alt="nkc">
                 </div>
                 <div class="details">
                     <h3>Okuma LCS15</h3>
@@ -98,14 +98,14 @@ img{
          
                 <div class="card card3">
                     <div class="container">
-                        <img src="{% static 'image/dmu50jk.png' %}" alt="nkc">
+                        <img src="{% static 'image/equipment/dmu50jk.png' %}" alt="nkc">
                     </div>
                     <div class="details">
                         <h3>DMU 50</h3>
                         <p>Max. X-Axis  500 mm<br>
                           Max. Y-Axis 450 mm<br>
                           Max. Z-Axis 400 mm<br>
-                          Max. workpiece diameter 630 mm<br><br>
+                          Max. workpiece diameter 630 mm<br><br><br>
                       
                         </p>
                     </div>
@@ -113,11 +113,42 @@ img{
 
                 <div class="card card3">
                     <div class="container">
-                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
+                        <img src="{% static 'image/equipment/dmg as18.png' %}" alt="nkc">
                     </div>
                     <div class="details">
-                        <h3>Head title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                        <h3>A18S</h3>
+                        <p>High-precision Turning Center Featuring Y-axis<br>
+                        The A-18S is a high-precision compact multiprocessing turning<br><br><br> </p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/equipment/g07.png' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>G07</h3>
+                        <p>The G-07 is a super-high-precision flat tooling CNC lathe <br>that<br> WASINO is pride of. It features a left/right symmetrical  <br><br></p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/equipment/center.png' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Fanuc D14MiA</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod <br>veniam reprehenderit, perspiciatis quae, a esse animi numquam  .<br><br><br></p>
+                    </div>
+                </div>
+
+                <div class="card card3">
+                    <div class="container">
+                        <img src="{% static 'image/equipment/keyence.png' %}" alt="nkc">
+                    </div>
+                    <div class="details">
+                        <h3>Keyence XM-1200</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehen .<br><br><br><br></p>
                     </div>
                 </div>
 
@@ -127,7 +158,7 @@ img{
                     </div>
                     <div class="details">
                         <h3>Head title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod <br>veniam reprehenderit, perspiciatis quae, a esse animi numquam<br> molestias quam aliquam accusamus! .<br><br></p>
                     </div>
                 </div>
 
@@ -137,37 +168,7 @@ img{
                     </div>
                     <div class="details">
                         <h3>Head title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
-                    </div>
-                </div>
-
-                <div class="card card3">
-                    <div class="container">
-                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
-                    </div>
-                    <div class="details">
-                        <h3>Head title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
-                    </div>
-                </div>
-
-                <div class="card card3">
-                    <div class="container">
-                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
-                    </div>
-                    <div class="details">
-                        <h3>Head title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
-                    </div>
-                </div>
-
-                <div class="card card3">
-                    <div class="container">
-                        <img src="{% static 'image/Picture1.jpg' %}" alt="nkc">
-                    </div>
-                    <div class="details">
-                        <h3>Head title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod <br>veniam reprehenderit, perspiciatis quae, a esse animi numquam molestias quam aliquam accusamus! .<br><br></p>
                     </div>
                 </div>
 
