@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+
+    img{
+        width: 500px;
+    }
+
+    body{
+        padding-top: 2rem;
+    }
+
+    .location h1{
+        font-size: 50px;
+        width: 250px;
+        margin: 1rem;
+        /*border: solid #07416d;*/
+        color: rgb(201, 205, 208);
+    }    
+</style>
+<div class="location"><h1>Location</h1></div>
+<div class="row">
+    <div class="col-8"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.151971844754!2d100.79992761486734!3d13.587525704739678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5b436374f905%3A0xd42ae461d69e7993!2z4Lia4LiI4LiBLiDguYTguJTguKPguLTguIHguLQo4LmE4LiX4Lii4LmB4Lil4LiZ4LiU4LmMKeC4iOC4s-C4geC4seC4lA!5e0!3m2!1sth!2sth!4v1651040319722!5m2!1sth!2sth" width="1450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+   
+  </div>
+
+
+ 
+{% endblock content %}
