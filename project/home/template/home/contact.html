@@ -51,71 +51,317 @@ body {
   background: linear-gradient(to right, #022642 0%, #145383 80%);
   font-size: 12px;
 }
+#contact {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Montserrat', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.form-control, 
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+  /*border: chartreuse solid;*/
+  margin-left:  3rem;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 0px;
+  padding-left: 30px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Montserrat', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
 </style>
 <body>
-<div class="background responetablet">
-    <div class="container responetablet">
-      <div class="screen">
-        <div class="screen-header">
-          <div class="screen-header-left">
-            <div class="screen-header-button close"></div>
-            <div class="screen-header-button maximize"></div>
-            <div class="screen-header-button minimize"></div>
-          </div>
-          <div class="screen-header-right">
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
+<div class="container" style="margin-top: 10rem;">
+  <section id="contact">  
+    <div class="contact-wrapper">
+    
+    <!-- Left contact page --> 
+      
+      <form id="ContactFrom" class="form-horizontal" role="form" name="ContactFrom" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <div class="col-sm-12" style="padding: 0%;">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name">
           </div>
         </div>
-        <div class="screen-body responetablet">
-          <div class="screen-body-item left responetablet">
-            <div class="app-title responetablet">
-              <span>CONTACT US</span>
-            </div>
-            <div class="app-contact responetablet">
-              <ul class="fa-ul responetablet">
-                <li><i class="fa-li fa fa-map-marker fa-2x"></i><p>172/2 Moo 17 Bangpli Industrial estate Bang Sao Thong, Samut Prakan 10570 Thailand</p></li>
-                <li><i class="fa-li fa fa-envelope-o fa-2x"></i><p>info@dairiki-t.net</p></li>
-                <li><i class="fa-li fa fa-phone fa-2x"></i><p>+66 (0) 2-704-0012</p></li>
-              </ul>            
-            </div>
-          </div>
-          <div class="screen-body-item">
-              <form method="POST" id="ContactFrom responetablet">
-                  
-                <div class="app-form">
-                    <div class="app-form-group">
-                      <label for="name" style="font-size: smaller;color: aliceblue;">Name</label>
-                      <input type="text" class="app-form-control" name="name" id="name">
-                    </div>
-                    <div class="app-form-group">
-                      <label for="email" style="font-size: smaller;color: aliceblue;">Email</label>  
-                      <input type="email" class="app-form-control"  name="email" id="email">
-                    </div>
-                    <div class="app-form-group">
-                      <label for="name" style="font-size: smaller;color: aliceblue;">Subject</label>
-                      <input type="text" class="app-form-control"  name="subject" id="subject">
-                    </div>
-                    <div class="app-form-group message">
-                      <label for="name" style="font-size: smaller;color: aliceblue;">Detail</label>
-                      <textarea class="app-form-control" name="detail" style="height: 7rem;" id="detail"></textarea>
-                    </div>
-                    <div class="app-form-group buttons">
-                      <button class="btn btn-primary btn-lg" id="submit" type="submit" value="SEND">
-                        <div class="send-button">
-                          <div class="alt-send-button">
-                            <i class='fa fa-paper-plane' style='color: rgb(255, 255, 255);margin-left: auto; margin-right: auto;'></i><span class="send-text">SEND</span>
-                          </div>
-                        </div>
-                        </button>
-                    </div>
-                  </div>
-              </form>
+
+        <div class="form-group">
+          <div class="col-sm-12" style="padding: 0%;">
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
           </div>
         </div>
-      </div>
+  
+        <div class="form-group" >
+          <div class="col-sm-12" style="padding: 0%">
+            <input type="text" class="form-control" id="subject" placeholder="SUBJECT" name="subject">
+          </div>
+        </div>
+  
+        <textarea class="form-control" rows="10" placeholder="Detail" name="detail" id="detail"></textarea>
+        
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="submit" name="submit">
+          <div class="alt-send-button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>
+        
+      </form>
+      
+    <!-- Left contact page --> 
+      
+        <div class="direct-contact-container">
+  
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">172/2 Moo 17 Bangpli Industrial estate
+              Bang Sao Thong, Samut Prakan 10570
+              Thailand</span></i></li>
+            
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+66 (0)2-704-0012" title="Give me a call">+66 (0)2-704-0012</a></span></i></li>
+            
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:info@dairiki-t.net" title="Send me an email">info@dairiki-t.net</a></span></i></li>
+            
+          </ul>
+          <hr>
+  
+        </div>
+      
     </div>
-  </div>
+    
+  </section> 
+</div>
   </body>
 {% endblock content %}
