@@ -9,9 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-import os
-from dotenv import load_dotenv
-load_dotenv()
 from pathlib import Path
 
 
@@ -128,6 +125,15 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = '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'
-SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+#EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+#SENDGRID_API_KEY = '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'
+#SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+#ต้องใช้เมล์โง่ๆของบริษัท
+EMAIL_HOST_USER = 'chonlatee.khamlue@gmail.com'
+EMAIL_HOST_PASSWORD = 'uqggkzmmkzvgabbm'

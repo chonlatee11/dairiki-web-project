@@ -1,6 +1,7 @@
 import email
 from email import message
 from hashlib import new
+from logging import exception
 from multiprocessing import context
 from re import sub
 import re
@@ -10,7 +11,7 @@ from django.http import BadHeaderError, HttpResponse
 from .models import *
 from django.conf import settings
 from django.core.mail import send_mail
-from .form import ContactForm
+from django.http import HttpResponse
 
 # Create your views here.
 def Home(request):
@@ -39,13 +40,18 @@ def Contact(request):
         new.email = email
         new.subject = subject
         new.detail = detail
+        
+        subjectmail = f'Message form {email}'
+        message = f'Subject {subject} \n {detail}'
+        sender = settings.EMAIL_HOST_USER
+        #เมลล์ของบริษัท
+        recipents = ['chonlatee1129@gmail.com']
+        send_mail(
+                subjectmail,message,sender,recipents,fail_silently=False,
+        )
         new.save()
         context['status'] = 'success'
     return render(request,'home/contact.html',context)
 
 def Location(request):
     return render(request,'home/location.html')
-
-def ContactForm(request):
-    form = ContactForm
-    return render(request,'home/contact.html',{'form' : form})
