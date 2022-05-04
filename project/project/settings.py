@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 from pathlib import Path
+
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-uh$l1o*6m(%(6i0y*%w45wr=v357q5$q)g3jy4v(t-t6x9)dkv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,3 +124,16 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+#SENDGRID_API_KEY = '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'
+#SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+#ต้องใช้เมล์โง่ๆของบริษัท
+EMAIL_HOST_USER = 'chonlatee.khamlue@gmail.com'
+EMAIL_HOST_PASSWORD = 'uqggkzmmkzvgabbm'
