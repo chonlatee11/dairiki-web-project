@@ -52,6 +52,3 @@ def Contact(request):
         new.save()
         context['status'] = 'success'
     return render(request,'home/contact.html',context)
-
-def Location(request):
-    return render(request,'home/location.html')
