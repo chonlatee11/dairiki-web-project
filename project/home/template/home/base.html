@@ -15,26 +15,23 @@
 </head>
     
     <header>
-        <nav style="background-color: #042742; font-family: 'Montserrat', sans-serif; font-size: 18px;letter-spacing: 1.4px; width: 700;" class="navbar navbar-expand-md navbar-dark fixed-top">
+        <nav style="background-color: #042742; font-family: 'Montserrat', sans-serif; font-size: 25px;letter-spacing: 1.4px; width: 700;" class="navbar navbar-expand-md navbar-dark fixed-top">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li>
-                <a class="navbar-brand" href="{% static 'image//logo/LOGO.png' %}"></a>
+              <li class="nav-item active">
+                <a href="{% url 'Home' %} " class="nav-link"><img class="img-fluid" src="{% static 'image/logo/LOGO.ico' %}" alt="logo" width="60px" height="60px" style="margin-top: -0.5rem; margin-bottom: -0.5rem;"></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/profile">Profile <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'Profile' %}">Profile <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'Product' %}">Product <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'Equipment' %}">Equipment <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'Location' %}">Location <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'Contact' %}">Contact us <span class="sr-only">(current)</span></a>
