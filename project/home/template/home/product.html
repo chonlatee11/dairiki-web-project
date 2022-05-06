@@ -1,81 +1,320 @@
 {% extends 'home/base.html' %}
-{% load static %}
 {% block content %}
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .container{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .pictureset{
-        padding-bottom: 2rem;
-        max-width: auto;
-        height: auto;
-    }
-    .swiper{
-        width: 80%;
-        height: fit-content;
-    }
-    .swiper-slide img{
-        width: 60%;
-        margin-left: 10rem;
-    }
-    .swiper .swiper-button-prev,.swiper .swiper-button-next{
-        color: #ffff;
-    }
-    .swiper .swiper-pagination-bullet-active{
-        background: #ffff;
-    }
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 8rem;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #707070;
+	background-color: #333;
+}
+
+.container {
+	margin-top: 0 auto;
+	max-width: 700px;
+	max-height: 150vh;
+	background-color: #052B47;
+}
+
+
+/* Useful Classes */
+.xy-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.transition {
+	transition: all 350ms ease-in-out;
+}
+
+.r-3-2 {
+	width: 100%;
+	padding-bottom: 66.667%;
+	background-color: #ddd;
+}
+
+.image-holder {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* Main Styles */
+.gallery-wrapper {
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+  	box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.gallery {
+	position: relative;
+	white-space: nowrap;
+	font-size: 0;
+	background-color: #fff;
+}
+
+.item-wrapper {
+	cursor: pointer;
+	width: 15%; /* arbitrary value */
+	display: inline-block;
+	background-color: #fff;
+	margin-bottom: 0;
+}
+
+.gallery-item { opacity: 0.5; }
+.gallery-item.active { opacity: 1; }
+
+.controls {
+	font-size: 10;
+	border-top: none;
+}
+.move-btn {
+	display: inline-block;
+	width: 50%;
+	border: none;
+  	color: #ccc;
+	background-color: transparent;
+	padding: 0.2em 1.5em;
+}
+.move-btn:first-child {border-right: none;}
+.move-btn.left  { cursor: w-resize ;}
+.move-btn.right { cursor: e-resize; }
+
+
 </style>
+
 <body>
     <div class="container">
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/castem-2.png' %}"></div>
-            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/castem-1.png' %}"></div>
-            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/DRJ-1b.png' %}"></div>
-            <div class="swiper-slide"><img class="pictureset" src="{% static 'image/DRJ-2b.png' %}"></div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+	
+        <div class="feature">
+            <figure class="featured-item image-holder r-3-2 transition" style="height: max-content; border-radius: 20px;
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);"></figure>
         </div>
+        
+        <div class="gallery-wrapper">
+            <div class="gallery">
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 active transition "></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition "></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+                    <div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2 transition"></figure>
+                    </div>
+					<div class="item-wrapper">
+                        <figure class="gallery-item image-holder r-3-2"></figure>
+                    </div>
+            </div>
+        </div>
+		<div class="controls">
+            
+            
+        <div class="row">
+			<div class="col">
+				<button class="move-btn left" style="width: 100%;">&larr;</button>
+			</div>
+			<div class="col">
+				<button class="move-btn right" style="width: 100%;">&rarr;</button>
+			</div>
+		</div>
+		</div>
+        
     </div>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script>
-    const swiper = new Swiper('.swiper', {
-        autoplay:{
-            delay:3000,
-            disableOnInteraction: false,
-        },
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable : true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-</script>
 </body>
+
+<script>
+    var gallery = document.querySelector('.gallery');
+	var galleryItems = document.querySelectorAll('.gallery-item');
+	var numOfItems = gallery.children.length;
+	var itemWidth = 23; // percent: as set in css
+
+	var featured = document.querySelector('.featured-item');
+
+	var leftBtn = document.querySelector('.move-btn.left');
+	var rightBtn = document.querySelector('.move-btn.right');
+	var leftInterval;
+	var rightInterval;
+
+	var scrollRate = 0.2;
+	var left;
+
+function selectItem(e) {
+	if (e.target.classList.contains('active')) return;
+	
+	featured.style.backgroundImage = e.target.style.backgroundImage;
+	
+	for (var i = 0; i < galleryItems.length; i++) {
+		if (galleryItems[i].classList.contains('active'))
+			galleryItems[i].classList.remove('active');
+	}
+	
+	e.target.classList.add('active');
+}
+
+function galleryWrapLeft() {
+	var first = gallery.children[0];
+	gallery.removeChild(first);
+	gallery.style.left = -itemWidth + '%';
+	gallery.appendChild(first);
+	gallery.style.left = '0%';
+}
+
+function galleryWrapRight() {
+	var last = gallery.children[gallery.children.length - 1];
+	gallery.removeChild(last);
+	gallery.insertBefore(last, gallery.children[0]);
+	gallery.style.left = '-23%';
+}
+
+function moveLeft() {
+	left = left || 0;
+
+	leftInterval = setInterval(function() {
+		gallery.style.left = left + '%';
+
+		if (left > -itemWidth) {
+			left -= scrollRate;
+		} else {
+			left = 0;
+			galleryWrapLeft();
+		}
+	}, 1);
+}
+
+function moveRight() {
+	//Make sure there is element to the leftd
+	if (left > -itemWidth && left < 0) {
+		left = left  - itemWidth;
+		
+		var last = gallery.children[gallery.children.length - 1];
+		gallery.removeChild(last);
+		gallery.style.left = left + '%';
+		gallery.insertBefore(last, gallery.children[0]);	
+	}
+	
+	left = left || 0;
+
+	leftInterval = setInterval(function() {
+		gallery.style.left = left + '%';
+
+		if (left < 0) {
+			left += scrollRate;
+		} else {
+			left = -itemWidth;
+			galleryWrapRight();
+		}
+	}, 1);
+}
+
+function stopMovement() {
+	clearInterval(leftInterval);
+	clearInterval(rightInterval);
+}
+
+leftBtn.addEventListener('mouseenter', moveLeft);
+leftBtn.addEventListener('mouseleave', stopMovement);
+rightBtn.addEventListener('mouseenter', moveRight);
+rightBtn.addEventListener('mouseleave', stopMovement);
+
+
+//Start this baby up
+(function init() {
+	var images = [
+		'https://drive.google.com/uc?id=1KoVnAaNeUcy19f2BH3RvxCoKXaDlfJY1',
+		'https://drive.google.com/uc?id=1ryEB56uykHpNAA5pSKxKTWjoOOwCHN_u',
+		'https://drive.google.com/uc?id=1RzrVGXlVFI-v8iNxzqZcxyeeuQTFIBmA',
+		'https://drive.google.com/uc?id=1AWJEiADWixn9uqGSe_9842EKw58haYt9',
+		'https://drive.google.com/uc?id=1K_OV3nsh0DoBdy9AOuwR3NnB5LqQIXlz',
+		'https://drive.google.com/uc?id=1aDZzh5fl73oKUX4l36hqyDdDZT9TI-t6',
+		'https://drive.google.com/uc?id=1NzskIHAXU-qauGDUJcNDU-ptl7HE-28_',
+		'https://drive.google.com/uc?id=1Pn0Une_4nHC0pr6K0LKFcOC_lV53yhKn',
+		'https://drive.google.com/uc?id=185nod1KXalCtMCAKN9PCDzYHLKFnDBQK',
+		'https://drive.google.com/uc?id=1lDD7NKGlCjIBiFYWn9wy5lu7amgR_Pi7',
+		'https://drive.google.com/uc?id=1b5elKmuBFHRccOq2y7KaKgLo3LCTWZ1a',
+		'https://drive.google.com/uc?id=1CGauIkvazAyGRv_mcea5BQYfQXum2fs6',
+		'https://drive.google.com/uc?id=1Cvy4OpNXwik5wQZT_m0v2267u6xMexiJ',
+		'https://drive.google.com/uc?id=1m9VZ-iHcrAQyZys6bVs9OFpauRdZgvc3',
+		'https://drive.google.com/uc?id=1zYNo1apyHpP9_cRazUsVKLDNpsw66NCv',
+		'https://drive.google.com/uc?id=19oUvn6viqa5K228J3QaGvFYdIhLqW8vL',
+		'https://drive.google.com/uc?id=1Npt_fVC9djkLFEXuR2MQiYdlObx0YZTB',
+		'https://drive.google.com/uc?id=1_hAyKHPmpxtsqnn4_4lIVWuMDv7HUM46',
+		'https://drive.google.com/uc?id=1j1HHBn0D94Mq24Vb5oKR9_7-HOecovCW',
+		'https://drive.google.com/uc?id=1Dyvo0E8t4sHBzL56IpgI4pRoCeKphWzp',
+		'https://drive.google.com/uc?id=15y2C8zfNoIDNx0ziPsBiwPN9v1jMNeZV',
+		'https://drive.google.com/uc?id=1C5GfY5fWI_twehQZ3fivGr5SWCaUEtD4'
+	];
+	
+	//Set Initial Featured Image
+	featured.style.backgroundImage = 'url(' + images[0] + ')';
+	
+	//Set Images for Gallery and Add Event Listeners
+	for (var i = 0; i < galleryItems.length; i++) {
+		galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
+		galleryItems[i].addEventListener('click', selectItem);
+	}
+})();
+</script>
 {% endblock content %}
